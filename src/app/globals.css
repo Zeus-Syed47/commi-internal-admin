@@ -1,0 +1,74 @@
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+    background-color: var(--background);
+}
+
+/* This affects all MUI Dialogs */
+.MuiDialog-root {
+  z-index: 13000 !important; /* or higher than your drawer */
+}
+
+
+.MuiBox-root.no-overflow {
+  overflow: visible !important;
+}
+
+:root{
+  --background: #EDEDF0;
+  --primary: #133E68;
+  --secondary: #95959E;
+  --Header-height: 64px;
+}
+
+.MuiButton-root{
+  background-color: var(--primary) !important;
+  color: white !important;
+}
+
+
+.MuiBox-root.chats-pane-box{
+  overflow:auto !important;
+}
+
+.MuiStack-root.chat-stack{
+  overflow:visible !important
+}
+
+.MuiBox-root.chat-box{
+  overflow-y:scroll !important
+}
+
+/* .MuiBox-root.main-history{
+  overflow-y: auto !important;
+} */
+
+.MuiBox-root.waba-box-main{
+  overflow-y: auto !important;
+}
+
