@@ -115,6 +115,46 @@ export default function CreatePrompt(props: any) {
                             </Stack>
                         </Stack>
 
+
+                        <Stack
+                            direction="row"
+                            spacing={3}
+                            sx={{ display: { xs: 'none', md: 'flex' }, my: 1 }}
+                        >
+                            <Stack spacing={2} sx={{ flexGrow: 1 }}>
+                                <Stack spacing={1}>
+                                    <FormLabel>Voice</FormLabel>
+                                    <RadioGroup
+                                        aria-labelledby="demo-radio-buttons-group-label"
+                                        defaultValue="Alloy"
+                                        name="radio-buttons-group"
+                                        className="flex flex-row gap-3 pl-3 flex-wrap"
+                                        value={promptValues?.voice}
+                                        onChange={(e) => updatePromptFields({
+                                                value: e.target.value,
+                                                key: "voice"
+                                        })} 
+
+                                    >
+                                        <FormControlLabel value="alloy" control={<Radio />} label="Alloy" />
+                                        <FormControlLabel value="ash" control={<Radio />} label="Ash" />
+                                        <FormControlLabel value="ballad" control={<Radio />} label="Ballad" />
+                                        <FormControlLabel value="cedar" control={<Radio />} label="Cedar" />
+                                        <FormControlLabel value="coral" control={<Radio />} label="Coral" />
+                                        <FormControlLabel value="echo" control={<Radio />} label="Echo" />
+                                        <FormControlLabel value="fable" control={<Radio />} label="Fable" />
+                                        <FormControlLabel value="marin" control={<Radio />} label="Marin" />
+                                        <FormControlLabel value="nova" control={<Radio />} label="Nova" />
+                                        <FormControlLabel value="onyx" control={<Radio />} label="Onyx" />
+                                        <FormControlLabel value="sage" control={<Radio />} label="Sage" />
+                                        <FormControlLabel value="shimmer" control={<Radio />} label="Shimmer" />
+                                        <FormControlLabel value="verse" control={<Radio />} label="Verse" />
+                                    </RadioGroup>
+                                </Stack>
+
+                            </Stack>
+                        </Stack>
+
                         {/* <Stack
                             direction="row"
                             spacing={3}

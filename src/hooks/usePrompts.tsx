@@ -8,6 +8,7 @@ import useStore from "@/store";
 const defaultPromptValues = {
     name: "",
     type:"",
+    voice:"",
     system_prompt:""
 }
 
@@ -34,6 +35,9 @@ const usePrompts =()=>{
             }
             if(selectedPromptForEdit?.type){
                 promptValuesObj.type = selectedPromptForEdit?.type
+            }
+            if(selectedPromptForEdit?.voice){
+                promptValuesObj.voice = selectedPromptForEdit?.voice
             }
             if(selectedPromptForEdit?.system_prompt){
                 promptValuesObj.system_prompt = selectedPromptForEdit?.system_prompt
@@ -100,6 +104,9 @@ const usePrompts =()=>{
         if(!promptValues.type){
             return
         }
+        if(!promptValues.voice){
+            return
+        }
         if(!promptValues.system_prompt){
             return
         }
@@ -107,6 +114,7 @@ const usePrompts =()=>{
         let tempObj: any = {
             name: promptValues.name,
             type: promptValues.type,
+            voice: promptValues.voice,
             system_prompt:promptValues.system_prompt
         }
 
@@ -123,6 +131,9 @@ const usePrompts =()=>{
         }
         if(promptValues?.type){
             updateObj.type = promptValues.type
+        }
+        if(promptValues?.voice){
+            updateObj.voice = promptValues.voice
         }
         if(promptValues?.system_prompt){
             updateObj.system_prompt = promptValues.system_prompt
