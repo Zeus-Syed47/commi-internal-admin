@@ -91,6 +91,10 @@ export const routes = {
     home: "/ai",
     create: "/create-ai",
   },
+  clients:{
+    home:"/clients",
+    list:"/clients/list"
+  }
 };
 
 export const findBreadCrumbValue = (key) => {

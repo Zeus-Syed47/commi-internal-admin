@@ -17,6 +17,7 @@ import { googleLogout } from '@react-oauth/google';
 import BookIcon from '@mui/icons-material/Book';
 import { Step } from '@mui/joy';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 export default function DrawerProvider({ children }) {
 
@@ -38,6 +39,13 @@ export default function DrawerProvider({ children }) {
             text:"Base Prompts",
             path: routes.baseprompts.home,
             icon: <KeyboardIcon sx={{ height: 18, width: 18 }}/>,
+            selected: false
+        },
+        {
+            key:'clients',
+            text:"Clients",
+            path: routes.clients.home,
+            icon: <GroupsIcon sx={{ height: 18, width: 18 }}/>,
             selected: false
         }
     ]);

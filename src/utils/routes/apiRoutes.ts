@@ -51,3 +51,5 @@ export const CALL = "/call";
 export const BLOGS = "/blogs"
 
 export const PROMPTS = '/base-prompts'
+
+export const CLIENTS = '/companies'

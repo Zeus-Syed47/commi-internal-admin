@@ -1,8 +1,9 @@
 import { createContext } from "react";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import BookIcon from '@mui/icons-material/Book';
-import { Inbox, Light, Wifi } from "@mui/icons-material";
+import { Group, Inbox, Light, Wifi } from "@mui/icons-material";
 import KeyboardIcon from '@mui/icons-material/Keyboard';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 export const DrawerContext = createContext({
   verticalRoutes: [
@@ -16,6 +17,12 @@ export const DrawerContext = createContext({
       text:"Base Prompts",
       path:"/baseprompts",
       icon: <KeyboardIcon/>,
+      selected:false
+    },
+    {
+      text: "Clients",
+      path: "/clients",
+      icon: <GroupsIcon/>,
       selected:false
     }
   ],
